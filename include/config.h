@@ -5,7 +5,7 @@
 
 // FAIRY_TYPE_IMPLEMENTED should be used if you want to implement the fairy type and overwrite type 9 in this project
 // set FAIRY_TYPE_IMPLEMENTED to 0 if you do not want this to happen
-#define FAIRY_TYPE_IMPLEMENTED 1
+#define FAIRY_TYPE_IMPLEMENTED 0
 
 // TYPE_EFFECTIVENESS_GEN defines the type chart interactions you would like to use.
 // Defining this as "5" or lower will revert Steel to resisting Ghost- and Dark-type moves.
@@ -33,17 +33,17 @@
 // HIDDEN_ABILITIES defines whether or not Pokémon with their hidden ability bit set will receive their hidden abilities when being generated/changing form in battle.
 // commenting this line out essentially disables hidden abilities to maintain default behavior, while leaving this as-is will introduce hidden abilities and all of their handling.
 // just need to set the HIDDEN_ABILITIES_FLAG from the save and then every mon should be generated with its hidden ability until the flag is cleared from another script
-#define HIDDEN_ABILITIES
-#define HIDDEN_ABILITIES_FLAG 2600
-#define HIDDEN_ABILITIES_STARTERS_FLAG 2601
+//#define HIDDEN_ABILITIES
+//#define HIDDEN_ABILITIES_FLAG 2600
+//#define HIDDEN_ABILITIES_STARTERS_FLAG 2601
 
 // MEGA_EVOLUTIONS defines whether or not Pokémon that are able to mega evolve will be able to do so.
 // commenting this line out essentially disables mega evolutions and maintains default behavior with respect to them.  leaving this as-is will introduce mega evolutions when applied to the game.
-#define MEGA_EVOLUTIONS
+//#define MEGA_EVOLUTIONS
 
 // PRIMAL_REVERSION defines whether or not Kyogre and Groudon, when holding their orbs, will be able to change form when sent out in battle.
 // commenting this line out essentially disables primal reversion.  leaving this as-is will introduce primal reversions when applied to the game.
-#define PRIMAL_REVERSION
+//#define PRIMAL_REVERSION
 
 // ITEM_POCKET_EXPANSION defines whether or not item pockets will be given extra slots in the save in order to provide space for new items that are implemented
 // commenting this line out will prevent the item pockets from being expanded for the new items
@@ -64,13 +64,13 @@
 
 // IMPLEMENT_CAPTURE_EXPERIENCE defines whether or not capturing wild pokemon will net experience
 // commenting this line out disables capture experience
-#define IMPLEMENT_CAPTURE_EXPERIENCE
+//#define IMPLEMENT_CAPTURE_EXPERIENCE
 
 // IMPLEMENT_CRITICAL_CAPTURE defines whether or not throwing a poké ball has a certain percent chance of a guaranteed capture called a critical throw
 // commenting this line out disables critical captures
-#define IMPLEMENT_CRITICAL_CAPTURE
+//#define IMPLEMENT_CRITICAL_CAPTURE
 
-#define CRITICAL_CAPTURE_GENERATION GEN_LATEST
+//#define CRITICAL_CAPTURE_GENERATION GEN_LATEST
 
 // IMPLEMENT_NEW_EV_IV_VIEWER defines whether or not pressing L, R, or Select in the pokémon summaries will display EV's, IV's, or the raw stat
 // commenting this line out disables the building of the new EV/IV viewing system
@@ -81,20 +81,20 @@
 // uncommenting IMPLEMENT_LEVEL_CAP enables the level cap system.  make sure to also uncomment LEVEL_CAP_VARIABLE in the process
 // uncommenting UNCAP_CANDIES_FROM_LEVEL_CAP will allow for rare candies to not be capped by the level cap even with the level cap in place, like run & bun
 // uncommenting ALLOW_LEVEL_CAP_EVOLVE will allow for rare candies to evolve pokemon already at the level cap that can evolve at that level already
-//#define IMPLEMENT_LEVEL_CAP
-//#define LEVEL_CAP_VARIABLE 0x416F
+#define IMPLEMENT_LEVEL_CAP
+#define LEVEL_CAP_VARIABLE 0x416F
 //#define UNCAP_CANDIES_FROM_LEVEL_CAP
-//#define ALLOW_LEVEL_CAP_EVOLVE
+#define ALLOW_LEVEL_CAP_EVOLVE
 
 // System flags that need to be enabled for the player to use the gimmick. If you want to change them, remember to change them in flags.s as well for consistency
-#define FLAG_MEGA_EVOLUTION_ENABLED 2518
-#define FLAG_Z_MOVE_ENABLED 2519
-#define FLAG_DYNAMAX_ENABLED 2520
-#define FLAG_TERASTALIZATION_ENABLED 2521
+//#define FLAG_MEGA_EVOLUTION_ENABLED 2518
+//#define FLAG_Z_MOVE_ENABLED 2519
+//#define FLAG_DYNAMAX_ENABLED 2520
+//#define FLAG_TERASTALIZATION_ENABLED 2521
 
 // UPDATE_OVERWORLD_POISON will remove overworld poison if enabled
 // comment the line out below to retain overworld poison
-#define UPDATE_OVERWORLD_POISON
+//#define UPDATE_OVERWORLD_POISON
 
 // DISABLE_END_OF_TURN_WEATHER_MESSAGE removes the weather messages at the end of the turn.  instead the bottom screen icon can be used
 // uncomment the line out to get this functionality
@@ -102,7 +102,7 @@
 
 // IMPLEMENT_SEASONS currently implements season mechanics. Used for changing forms of Deerling and Sawsbuck.
 // Comment the line out to disable this functionality (Gen 6+)
-#define IMPLEMENT_SEASONS
+//#define IMPLEMENT_SEASONS
 
 // IMPLEMENT_DYNAMIC_WILD_SPECIES_FORMS allows wild species to appear with different forms if it has multiple forms.
 // Normally you will use monwithform, encounterwithform, headbuttencounterwithform to specify different forms (similar to Gen 5+)
@@ -127,17 +127,17 @@
 
 // Friendship grants additional bonuses.
 // Comment out the line below to revert back to Gen 5- behaviour
-#define FRIENDSHIP_EFFECTS
+//#define FRIENDSHIP_EFFECTS
 
 // RESTORE_ITEMS_AT_BATTLE_END will restore held items that are single-use at the end of battle (Gen 9)
 // comment out the line below to revert back to Gen 8- behavior
 #define RESTORE_ITEMS_AT_BATTLE_END
 
 // AI_CAN_GRAB_ITEMS allows to use Trick, Switcheroo, (Thief still todo) on the Player and actually grab items. This can result in lost items.
-#define AI_CAN_GRAB_ITEMS
+//#define AI_CAN_GRAB_ITEMS
 
 // PROTEAN_GENERATION defines the behavior that Protean should exhibit, where it either changes type every move (<=8) or changes type once per appearance in battle (>=9)
-#define PROTEAN_GENERATION GEN_LATEST
+#define PROTEAN_GENERATION 8
 
 // CORROSIVE_GAS_IMPLIED_BEHAVIOUR defines the behavior that Corrosive Gas should exhibit, where it either does it does not affect a Kyogre, a Groudon, or species holding their respective Mega Stones to not lose their Blue Orb, Red Orb, and Mega Stones respectively (TRUE), or affects species in the above cases (FALSE).
 #define CORROSIVE_GAS_IMPLIED_BEHAVIOUR TRUE
@@ -157,7 +157,7 @@
 //#define DISABLE_ITEMS_IN_TRAINER_BATTLE
 
 // REUSABLE_TMS will make TMs infinite and hide the quantity number.
-#define REUSABLE_TMS
+//#define REUSABLE_TMS
 
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 //#define DELETABLE_HMS
@@ -166,7 +166,7 @@
 #define MART_EXPANSION
 
 // POKEATHLON_EXPANSION allows for adding and modifying items to the Pokéathlon shop inventories
-//#define POKEATHLON_SHOP_EXPANSION
+#define POKEATHLON_SHOP_EXPANSION
 
 // STATIC_HP_BAR updates the HP bar to increase/decrease at a fixed rate like later generations
 #define STATIC_HP_BAR
@@ -178,16 +178,16 @@
 
 // Configs the ball capture ratio. 4 emulates the behaviour in HeartGold. However, due to the modernization of
 // the capture formula, it is only an estimate. Some are left as 4 to be less disruptive. Use GEN_LATEST for vanilla behaviour
-#define NEST_BALL_GENERATION    GEN_LATEST
-#define NET_BALL_GENERATION     GEN_LATEST
-#define REPEAT_BALL_GENERATION  GEN_LATEST
-#define TIMER_BALL_GENERATION   GEN_LATEST
-#define DUSK_BALL_GENERATION    GEN_LATEST
-#define QUICK_BALL_GENERATION   GEN_LATEST
+#define NEST_BALL_GENERATION    4
+#define NET_BALL_GENERATION     4
+#define REPEAT_BALL_GENERATION  4
+#define TIMER_BALL_GENERATION   4
+#define DUSK_BALL_GENERATION    4
+#define QUICK_BALL_GENERATION   4
 #define SAFARI_BALL_GENERATION  4
 #define LURE_BALL_GENERATION    4
 #define SPORT_BALL_GENERATION   4
-#define MOON_BALL_GENERATION    GEN_LATEST
+#define MOON_BALL_GENERATION    4
 
 // If caught, the Pokémon's friendship is set to 200 in Generations II through VII, or 150 in Generation VIII onwards.
 #define FRIEND_BALL_GENERATION  GEN_LATEST
@@ -200,7 +200,7 @@
 //#define FOG_WEATHER_MISTY_TERRAIN
 
 // NATURAL_GIFT_POWER_GEN defines the power of Natural Gift based on generation. Gen 6 or higher are modernized values.
-#define NATURAL_GIFT_POWER_GEN GEN_LATEST
+#define NATURAL_GIFT_POWER_GEN 4
 
 // BLOCK_LEARNING_UNIMPLEMENTED_MOVES prevents learning moves that are not implemented
 // based on the move having FLAG_UNUSABLE_UNIMPLEMENTED
@@ -210,12 +210,12 @@
 // DLC paradox forms can have Booster Energy tricked onto them.
 // Further info: vxtwitter.com/DaWoblefet/status/1737659599480565762
 // Comment out this define so all Paradox forms behave the same vis a vis Booster Energy
-#define VANILLA_PARADOX_BOOSTER_ENERGY_BEHAVIOUR
+//#define VANILLA_PARADOX_BOOSTER_ENERGY_BEHAVIOUR
 
 // VANILLA_MYTHICALS disallows non vanilla mythical pokemon to be treated as mythical
 // Vanilla behaviour adds shiiontic as a mythical more info here: https://xcancel.com/Sibuna_Switch/status/1613414136079323137
 // if VANILLA_MYTHICALS is not defined, but you can change that in the EXTRA_MYTHICALS macro if you want to
 // add or remove mythicals as you see fit
-#define VANILLA_MYTHICALS
+//#define VANILLA_MYTHICALS
 
 #endif
